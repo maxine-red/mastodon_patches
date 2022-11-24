@@ -3,6 +3,7 @@ SHELL=/bin/bash
 upgrade: unpatch patch
 
 patch: add_themes add_languages change_version_and_config
+	@ cp .env ..
 
 add_themes:
 	@ ./patch_files/themes.bash
@@ -14,7 +15,7 @@ change_version_and_config:
 	@ ./patch_files/version_and_config.bash
 
 unpatch: reset_repo gather_deletion_files
-	@ cd .. && xargs rm -rv < deletion_files.txt && rm deletion_files.txt ; cd -
+	@ cd .. && xargs rm -rv < deletion_files.txt && rm deletion_files.txt .env ; cd -
 
 reset_repo:
 	@ cd .. && git checkout . && cd -
