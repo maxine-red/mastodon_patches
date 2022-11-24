@@ -16,12 +16,3 @@ original repository.
 
 Currently only up to version 3.4.6 of Mastodon are tested and supported.
 
-### Tweaks
-There are also some tweaks to the environment variables, this requires. To let
-Mastodon run easier on lower end hardware, and to let people know about these
-tweaks, the following environment variables need to be changed accordingly:
-```
-GITHUB_REPOSITORY=https://github.com/maxine-red/mastodon_patches
-MAX_THREADS=3 (puma)
-WEB_CONCURRENCY=1 (puma)
-```
