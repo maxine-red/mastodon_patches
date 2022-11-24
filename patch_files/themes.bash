@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$(dirname $0)/test_wrapper.bash"
 append () {
   file='../config/themes.yml'
   if ! grep -q "$1" $file; then
