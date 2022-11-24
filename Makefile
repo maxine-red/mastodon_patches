@@ -1,4 +1,7 @@
 SHELL=/bin/bash
+
+upgrade: unpatch patch
+
 patch: add_themes add_languages change_version_and_config
 
 add_themes:
