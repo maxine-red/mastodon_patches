@@ -17,6 +17,6 @@ sanitized_multiline_sed () {
 }
 
 not_found () {
-  echo "Pattern '$1' not found in $3! Please check code."
+  echo "Pattern '$1' not found in $2! Please check code."
   exit 1
 }
